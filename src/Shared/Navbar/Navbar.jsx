@@ -36,10 +36,12 @@ const Navbar = () => {
       document.documentElement.removeAttribute('data-theme')
       document.documentElement.setAttribute('data-theme', 'light')
       localStorage.removeItem('darkMode');
+
     } else {
       document.documentElement.removeAttribute('data-theme')
       document.documentElement.setAttribute('data-theme', 'dark')
       localStorage.setItem('darkMode', 'enabled');
+
     }
     setIsDarkMode(!isDarkMode);
   }
