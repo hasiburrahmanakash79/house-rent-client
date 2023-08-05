@@ -1,27 +1,49 @@
+import { useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from '../../assets/HomeHeven renta.png'
 
 const Navbar = () => {
 
-    const NavItems = (
-        <>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/booking">Booking</Link>
-          </li>
-          <li>
-            <Link to="/house">House</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </>
-      );
+
+ const dark= localStorage.getItem('darkMode');
+
+
+
+  const [isDarkMode, setIsDarkMode] = useState(dark?true:false)
+  const NavItems = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/booking">Booking</Link>
+      </li>
+      <li>
+        <Link to="/house">House</Link>
+      </li>
+      <li>
+        <Link to="/blogs">Blog</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+    </>
+  );
+
+
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.removeItem('darkMode');
+    } else {
+      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('darkMode', 'enabled');
+    }
+    setIsDarkMode(!isDarkMode);
+  }
+
 
   return (
     <div className="navbar bg-base-100">
@@ -50,7 +72,7 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-        <a className="cursor-pointer"><img src={logo} alt="logo" className="h-16"/></a>
+        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -58,7 +80,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+      <button onClick={toggleDarkMode} className="mx-3 text-lg">
+      
+            {
+              isDarkMode  ? <FaSun className="text-white"></FaSun> : <FaMoon></FaMoon>
+            }
+    
+        </button>
+
+
+        <Link to={'/login'} className="btn btn-sm ">Login</Link>
+
+
       </div>
     </div>
   );
