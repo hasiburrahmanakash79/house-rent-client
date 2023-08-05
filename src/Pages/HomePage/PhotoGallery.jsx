@@ -3,7 +3,7 @@
 const PhotoGallery = () => {
     return (
         <div>
-            <p>Photo Gallery</p>
+            <p>add photo in this Photo Gallery</p>
         </div>
     );
 };

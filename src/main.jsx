@@ -4,6 +4,8 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes/routes'
 
+import './app.css'
+
 if(localStorage.getItem('darkMode')){
   document.documentElement.setAttribute('data-theme', 'dark')
 }
