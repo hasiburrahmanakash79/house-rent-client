@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import sun from '../../assets/dark_light/sun.png'
+import logo2 from '../../assets/HomeHeven renta.png'
 import { FaMoon, FaSun } from "react-icons/fa";
 const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+
+
+ const dark= localStorage.getItem('darkMode');
+
+
+
+  const [isDarkMode, setIsDarkMode] = useState(dark?true:false)
   const NavItems = (
     <>
       <li>
@@ -27,6 +33,7 @@ const Navbar = () => {
 
   const toggleDarkMode = () => {
     if (isDarkMode) {
+      document.documentElement.removeAttribute('data-theme')
       document.documentElement.setAttribute('data-theme', 'light')
       localStorage.removeItem('darkMode');
     } else {
@@ -65,7 +72,7 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+       <img src={logo2} alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -73,16 +80,16 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      <p onClick={toggleDarkMode} className="mx-3 text-lg">
+      <button onClick={toggleDarkMode} className="mx-3 text-lg">
       
             {
               isDarkMode  ? <FaSun className="text-white"></FaSun> : <FaMoon></FaMoon>
             }
     
-        </p>
+        </button>
 
 
-        <a className="btn">Button</a>
+        <Link to={'/login'} className="btn btn-sm ">Login</Link>
 
 
       </div>

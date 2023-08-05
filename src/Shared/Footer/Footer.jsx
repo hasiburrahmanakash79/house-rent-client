@@ -10,7 +10,7 @@ const Footer = () => {
   <div>
 
     <div className="grid gap-2">
-      <img width={'200px'} src={logo} alt="" />
+      <img width={'150px'} src={logo} alt="" />
       <p className='mx-2 text-2xl font-bold text-center'>HomeHeven renta</p>
     </div>
 
