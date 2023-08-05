@@ -1,26 +1,42 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import sun from '../../assets/dark_light/sun.png'
+import { FaMoon, FaSun } from "react-icons/fa";
 const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  const NavItems = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/booking">Booking</Link>
+      </li>
+      <li>
+        <Link to="/house">House</Link>
+      </li>
+      <li>
+        <Link to="/blogs">Blog</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+    </>
+  );
 
-    const NavItems = (
-        <>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/booking">Booking</Link>
-          </li>
-          <li>
-            <Link to="/house">House</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </>
-      );
+
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.removeItem('darkMode');
+    } else {
+      document.documentElement.removeAttribute('data-theme')
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('darkMode', 'enabled');
+    }
+    setIsDarkMode(!isDarkMode);
+  }
+
 
   return (
     <div className="navbar bg-base-100">
@@ -57,7 +73,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+      <p onClick={toggleDarkMode} className="mx-3 text-lg">
+      
+            {
+              isDarkMode  ? <FaSun className="text-white"></FaSun> : <FaMoon></FaMoon>
+            }
+    
+        </p>
+
+
         <a className="btn">Button</a>
+
+
       </div>
     </div>
   );
