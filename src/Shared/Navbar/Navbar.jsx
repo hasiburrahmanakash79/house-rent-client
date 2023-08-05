@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '../../assets/HomeHeven renta.png'
 
 const Navbar = () => {
 
@@ -49,7 +50,7 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="cursor-pointer"><img src={logo} alt="logo" className="h-16"/></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
