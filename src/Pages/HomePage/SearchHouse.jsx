@@ -12,8 +12,8 @@ const SearchHouse = () => {
     console.log(data)
   }
   return (
-    <section className='w-11/12 mx-auto space-y-8 text-center'>
-      <h2 className='mb-4 text-4xl'>For rates & Availability</h2>
+    <section className='w-11/12 mx-auto space-y-8 text-center py-10'>
+      <h2 className='mb-4 text-5xl font-bold'>For rates & Availability</h2>
       <p className='text-2xl font-semibold'>
         Search your <span className='text-3xl font-bold'>House</span>
       </p>
@@ -84,7 +84,7 @@ const SearchHouse = () => {
         <div className='mt-4 md:col-span-4'>
           <button
             type='submit'
-            className='px-12 mx-auto transition-all rounded-full hover:bg-green-700 hover:delay-75 w-fit btn btn-primary'
+            className='px-12 mx-auto transition-all rounded-full hover:bg-green-700 hover:delay-75 w-fit btn-primary'
           >
             Check Availability
           </button>
