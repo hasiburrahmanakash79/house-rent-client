@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
