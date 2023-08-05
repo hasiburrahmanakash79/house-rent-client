@@ -1,5 +1,15 @@
-const Main = () => {
-  return <div>From Main</div>
-}
+import Footer from "../Shared/Footer/Footer";
+import Navbar from "../Shared/Navbar/Navbar";
+import { Outlet } from "react-router-dom";
 
-export default Main
+const Main = () => {
+  return (
+    <div>
+      <Navbar/>
+      <Outlet/>
+      <Footer/>
+    </div>
+  );
+};
+
+export default Main;
