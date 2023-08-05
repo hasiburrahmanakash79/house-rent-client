@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const Apartments = () => {
   const [apartments, setApartments] = useState([]);
 
+
   useEffect(() => {
     fetch("../../../public/fake.json")
       .then((res) => res.json())
@@ -16,7 +17,8 @@ const Apartments = () => {
       <div className="grid lg:grid-cols-3 ">
       {apartments.map((apartment) => 
         <div key={apartment.id}  >
-          <div className="card w-96 bg-base-100 shadow-xl">
+          {/* className="card w-96 bg-base-100  shadow-xl"  */}
+          <div  className="card w-96 bg-base-100  shadow-xl"> 
             <figure>
               <img src={apartment?.image} />
             </figure>
