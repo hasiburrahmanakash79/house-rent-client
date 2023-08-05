@@ -12,9 +12,9 @@ else{
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-   <div className='container mx-auto'>
-   <RouterProvider router={router}></RouterProvider>
-   </div>
+ <div className='max-w-screen-2xl mx-auto'>
+   <React.StrictMode>
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
+ </div>
 )

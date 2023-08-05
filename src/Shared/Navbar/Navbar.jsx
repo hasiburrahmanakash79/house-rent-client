@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo2 from '../../assets/HomeHeven renta.png'
-import { FaMoon, FaSun } from "react-icons/fa";
+
 const Navbar = () => {
 
 
@@ -72,7 +71,7 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-       <img src={logo2} alt="" />
+        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

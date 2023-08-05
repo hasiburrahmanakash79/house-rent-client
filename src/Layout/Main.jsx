@@ -5,11 +5,11 @@ import { Outlet } from "react-router-dom";
 const Main = () => {
   return (
     <div>
-      <Navbar/>
-     <div className="min-h-[70vh]">
-     <Outlet/>
-     </div>
-      <Footer/>
+      <Navbar />
+      <div className="min-h-[calc(100vh-288px)]">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 };
