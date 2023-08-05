@@ -5,7 +5,7 @@ import SearchHouse from "./SearchHouse";
 
 const HomeSection = () => {
     return (
-        <div className="my-5">
+        <div className="my-5 container mx-auto">
             <Banner/>
             <SearchHouse/>
             <Apartments/>
