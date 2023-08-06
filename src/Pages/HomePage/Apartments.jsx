@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
+import useHouseData from "../../Hooks/useHouseData";
 
 const Apartments = () => {
-  const [apartments, setApartments] = useState([]);
-
-
-  useEffect(() => {
-    fetch("../../../public/fake.json")
-      .then((res) => res.json())
-      .then((data) => setApartments(data));
-  }, []);
+  const [apartments] = useHouseData();
 
   return (
     <div>
