@@ -62,7 +62,7 @@ const Signup = () => {
                   <button className="btn btn-primary">Signup Now</button>
                 </div>
                 <label className="label">
-                  <p className="label-text-alt ">Already Have Any Account? <Link className='link link-hoverF' to='/login'>Click Here</Link></p>
+                  <p className="label-text-alt ">Already Have Any Account? <Link className='link link-hover' to='/login'>Click Here</Link></p>
                 </label>
               </form>
             </div>
@@ -72,5 +72,5 @@ const Signup = () => {
     </div>
   );
 };
-
+// comment
 export default Signup;
