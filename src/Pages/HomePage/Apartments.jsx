@@ -10,9 +10,9 @@ const Apartments = () => {
       <div className="flex justify-center">
       <div className="grid lg:grid-cols-3 gap-10 ">
         {apartments.map((apartment) =>
-          <div key={apartment.id}  >
+          <div key={apartment.id}  className="card border-2 border-white" >
             {/* className="card w-96 bg-base-100  shadow-xl"  */}
-            <div className="card min-h-[450px]  bg-base-100 shadow-xl"> 
+            <div className="card min-h-[450px] bg-base-00 shadow-xl "> 
               <figure className="h-[250px]">
                 <img src={apartment?.image} />
               </figure>
