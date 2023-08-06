@@ -3,6 +3,7 @@ import loginLogo from '../../assets/login.png'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 const Signup = () => {
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
   const {
     register,
     handleSubmit,
@@ -17,9 +18,9 @@ const Signup = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content  lg:gap-20 flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <div className='flex flex-col items-center gap-1'>
-              <img className='max-w-[300px]' src={loginLogo} alt="" />
-              <h1 className='text-5xl font-bold'>Signup Now</h1>
+            <div className='grid gap-1'>
+             <img className='max-w-[250px]' src={loginLogo} alt="" />
+              <h1  className='w-[300px] text-3xl lg:text-5xl font-bold'>Signup Now</h1>
             </div>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -50,8 +51,9 @@ const Signup = () => {
                   <label className="label">
                     <span className="label-text">Password</span>
                   </label>
-                  <input {...register("password", { required: true })} type="text" placeholder="password" className="input input-bordered" />
+                  <input {...register("password", { required: true, pattern: {value: passwordRegex,message:'Password must contain at least 6 characters, one letter, one number, and one special character',}, })} type="text" placeholder="password" className="input input-bordered" />
                   {errors.password && <span>Password field is required</span>}
+                  {errors.password && <p>{errors.password.message}</p>}
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                   </label>
