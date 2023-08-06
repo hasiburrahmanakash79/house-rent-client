@@ -30,15 +30,15 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero  bg-base-200">
-        <div className="hero-content min-h-[calc(100vh-288px)] lg:gap-20 flex-col lg:flex-row-reverse">
+      <div className="hero  bg-base-100">
+        <div className="hero-content min-h-[calc(100vh-288px)] lg:gap-20 flex-col-reverse lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <div className='flex flex-col items-center gap-1'>
-              <img className='max-w-[300px]' src={loginLogo} alt="" />
+              <img className='max-w-[250px]' src={loginLogo} alt="" />
               <h1 className='text-5xl font-bold'>Login Now</h1>
             </div>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-xl  bg-base-100">
             <div className="card-body">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">
@@ -46,7 +46,7 @@ const Login = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input {...register("email", { required: true })} type="email" placeholder="email" className="input input-bordered" />
-                  {errors.email && <span>Email field is required</span>}
+                  {errors.email && <span className='text-red-500 mt-1'>Email field is required</span>}
                 </div>
 
                 <div className="form-control">
@@ -54,7 +54,7 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input {...register("password", { required: true })} type="password" placeholder="password" className="input input-bordered" />
-                  {errors.password && <span>Password field is required</span>}
+                  {errors.password && <span className='text-red-500 mt-1'>Password field is required</span>}
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                   </label>

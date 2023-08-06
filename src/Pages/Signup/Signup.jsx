@@ -16,9 +16,9 @@ const Signup = () => {
   return (
     <div>
       <div className="hero min-h-[calc(100vh-288px)] bg-base-200">
-        <div className="hero-content  lg:gap-20 flex-col lg:flex-row-reverse">
+        <div className="hero-content  lg:gap-20 flex-col-reverse lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <div className='grid gap-1'>
+            <div className='flex flex-col items-center gap-1'>
              <img className='max-w-[250px]' src={loginLogo} alt="" />
               <h1  className='w-[300px] text-3xl lg:text-5xl font-bold'>Signup Now</h1>
             </div>
