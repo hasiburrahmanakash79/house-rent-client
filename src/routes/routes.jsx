@@ -5,8 +5,9 @@ import Booking from '../Pages/Booking/Booking'
 import House from '../Pages/House/House'
 import Blogs from '../Pages/Blogs/Blogs'
 import Contact from '../Pages/Contact/Contact'
-import Logout from '../Pages/Logout/Logout'
+
 import Login from '../Pages/Login/Login'
+import Signup from '../Pages/Signup/Signup'
 
 const router = createBrowserRouter([
   {
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
         element: <Login/>
       },
       {
-        path: '/logout',
-        element: <Logout/>
+        path: '/signup',
+        element: <Signup/>
       },
     ]
   }

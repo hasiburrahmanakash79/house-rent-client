@@ -6,7 +6,7 @@ import router from './routes/routes'
 
 import './app.css'
 
-if (localStorage.getItem('darkMode')) {
+if(localStorage.getItem('darkMode')){
   document.documentElement.setAttribute('data-theme', 'dark')
 }
 else {

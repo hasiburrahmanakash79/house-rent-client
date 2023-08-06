@@ -4,17 +4,17 @@ const Apartments = () => {
   const [apartments] = useHouseData();
 
   return (
-    <div className="py-10">
-      <h2 className="mb-5 text-center text-5xl font-bold">
-        For rates & Availability
-      </h2>
+    <div>
+      <h1 className="text-center text-4xl font-semibold my-4">Rooms & Apartments</h1>
 
-      <div className="grid lg:grid-cols-3 gap-5">
-        {apartments.map((apartment) => (
-          <div key={apartment.id}>
-            <div className="card bg-base-100 border p-5 shadow-xl">
-              <figure>
-                <img className="w-full rounded" src={apartment?.image} />
+      <div className="flex justify-center">
+      <div className="grid lg:grid-cols-3 gap-10 ">
+        {apartments.map((apartment) =>
+          <div key={apartment.id}  className="card" >
+            {/* className="card w-96 bg-base-100  shadow-xl"  */}
+            <div className="card min-h-[450px] bg-base-200 shadow-lg "> 
+              <figure className="h-[250px]">
+                <img src={apartment?.image} />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{apartment?.apartment_type}</h2>
@@ -25,7 +25,8 @@ const Apartments = () => {
               </div>
             </div>
           </div>
-        ))}
+        )}
+      </div>
       </div>
     </div>
   );

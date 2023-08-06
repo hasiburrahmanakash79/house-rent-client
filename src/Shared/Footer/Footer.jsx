@@ -3,7 +3,7 @@ import logo from '../../assets/HomeHeven_Icon.png'
 const Footer = () => {
     return (
         <div>
-  <footer className=" bg-base-100 rounded-lg">
+  <footer className=" bg-base-100 rounded-lg shadow-md -top-4 p-4">
 
 <div className='footer p-10 pb-4 '>
 
