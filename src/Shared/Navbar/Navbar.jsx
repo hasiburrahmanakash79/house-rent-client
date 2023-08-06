@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
-
- const dark= localStorage.getItem('darkMode');
-
-
+  const dark= localStorage.getItem('darkMode');
 
   const [isDarkMode, setIsDarkMode] = useState(dark?true:false)
   const NavItems = (
@@ -16,10 +13,10 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/booking">Booking</Link>
+        <Link to="/house">House</Link>
       </li>
       <li>
-        <Link to="/house">House</Link>
+        <Link to="/booking">Booking</Link>
       </li>
       <li>
         <Link to="/blogs">Blog</Link>
@@ -43,7 +40,6 @@ const Navbar = () => {
     }
     setIsDarkMode(!isDarkMode);
   }
-
 
   return (
     <div className="navbar bg-base-100 shadow ">
@@ -81,17 +77,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
       <button onClick={toggleDarkMode} className="mx-3 text-lg">
-      
-            {
-              isDarkMode  ? <FaSun className="text-white"></FaSun> : <FaMoon></FaMoon>
-            }
-    
-        </button>
-
-
-        <Link to={'/login'} className="btn-secondary">Login</Link>
-
-
+        {
+          isDarkMode  ? <FaSun className="text-white"></FaSun> : <FaMoon></FaMoon>
+        }
+      </button>
+      <Link to={'/login'} className="btn-secondary">Login</Link>
       </div>
     </div>
   );
