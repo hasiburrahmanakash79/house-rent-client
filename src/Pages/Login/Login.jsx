@@ -30,8 +30,8 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content  lg:gap-20 flex-col lg:flex-row-reverse">
+      <div className="hero  bg-base-200">
+        <div className="hero-content min-h-[calc(100vh-288px)] lg:gap-20 flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <div className='flex flex-col items-center gap-1'>
               <img className='max-w-[300px]' src={loginLogo} alt="" />

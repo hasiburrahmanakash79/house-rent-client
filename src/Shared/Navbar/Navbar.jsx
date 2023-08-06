@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import logo from '../../assets/HomeHeven_Icon.png'
 const Navbar = () => {
 
   const dark= localStorage.getItem('darkMode');
@@ -70,7 +70,10 @@ const Navbar = () => {
             {NavItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+     <div className="flex items-center gap-1">
+     <img className="max-w-[80px]" src={logo} alt="" />
+     <h1 className="text-3xl">HomeHeven renta</h1>
+     </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

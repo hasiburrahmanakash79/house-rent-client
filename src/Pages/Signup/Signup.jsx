@@ -15,7 +15,7 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-[calc(100vh-288px)] bg-base-200">
         <div className="hero-content  lg:gap-20 flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <div className='grid gap-1'>
