@@ -12,10 +12,10 @@ const SearchHouse = () => {
     console.log(data)
   }
   return (
-    <section className='w-11/12 mx-auto space-y-8 text-center py-10'>
-      <h2 className='mb-4 text-5xl font-bold'>For rates & Availability</h2>
+    <section className='w-11/12 mx-auto space-y-5 text-center py-10'>
+      <h2 className='text-5xl font-bold'>For rates & Availability</h2>
       <p className='text-2xl font-semibold'>
-        Search your <span className='text-3xl font-bold'>House</span>
+        Search your House
       </p>
       <form
         className='grid grid-cols-1 md:grid-cols-4 md:gap-4'
@@ -26,7 +26,7 @@ const SearchHouse = () => {
           <input
             type='text'
             placeholder='where do you want to live?'
-            className='px-4 py-3 bg-white rounded-xl'
+            className='input input-bordered w-full max-w-xs'
             {...register('area', { required: true })}
             name='area'
           />
@@ -50,19 +50,19 @@ const SearchHouse = () => {
           <div className='w-full'>
             <label className='font-bold uppercase label'>Price </label>
             <input
-              className='w-full px-3 py-3 bg-white rounded-xl'
+              className='input input-bordered w-full max-w-xs'
               type='text'
               placeholder='mini'
               name='minimum'
               {...register('minimum')}
             />
           </div>
-          <div className='w-8 pt-4 mx-auto mt-12 text-white divider divider-vertical' />
+          <div className='w-8 pt-4 mx-auto mt-12 text-black divider divider-vertical' />
           <div className='w-full'>
             <label className='font-bold uppercase label'>Price </label>
             <input
               type='text'
-              className='w-full px-3 py-3 bg-white rounded-xl'
+              className='input input-bordered w-full max-w-xs'
               placeholder='max'
               name='maximum'
               {...register('maximum', { required: true })}
