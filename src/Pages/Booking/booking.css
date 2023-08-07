@@ -1,0 +1,24 @@
+.react-tabs__tab-list {
+  border-bottom: none !important;
+}
+/* .react-tabs__tab:focus{
+    outline: auto;
+} */
+.react-tabs__tab {
+  border: none;
+  padding: 0;
+  bottom: 0;
+  margin: 20px;
+}
+
+/* .react-tabs__tab-list {
+ ;
+} */
+
+.react-tabs__tab--selected {
+  background: linear-gradient(to right, #23a961, #303e6d);
+  z-index: 10;
+  color: white;
+  border-color: none !important;
+  border-radius: none !important;
+}
